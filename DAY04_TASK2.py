@@ -1,7 +1,7 @@
 
 try: 
-	a = int(input("Input an integer"))
-	b = int(input("Input another integer"))
+	a = int(input("Input an integer: "))
+	b = int(input("Input another integer: "))
 
 	sum = a+b
 	difference = a-b
