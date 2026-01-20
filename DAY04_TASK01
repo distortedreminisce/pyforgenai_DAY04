@@ -10,5 +10,10 @@ j = random.randint(0,6)
 color_list = ["red", "orange", "yellow", "green", "blue"]
 print(color_list[j])
 
+shuffled_color_list = []
+while len(color_list) != 0:
+	k = random.randint(0,len(color_list))
+	shuffled_color_list.append(color_list[k])
+print(shuffled_color_list)
 
 
