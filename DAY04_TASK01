@@ -1,19 +1,16 @@
 imoort datetime
-import random
+import random 
 
 #random
 for i in range (0,5):
 	random_int = random.randint(1, 101)
 	print(random_int)
 
-j = random.randint(0,6)
-color_list = ["red", "orange", "yellow", "green", "blue"]
-print(color_list[j])
+colors = ["red", "orange", "yellow", "green", "blue"]
+print(random.choice.colors)
+print(random.shuffle.colors)
 
-shuffled_color_list = []
-while len(color_list) != 0:
-	k = random.randint(0,len(color_list))
-	shuffled_color_list.append(color_list[k])
-print(shuffled_color_list)
+#datetime
+
 
 
