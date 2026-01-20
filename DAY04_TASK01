@@ -4,5 +4,11 @@ import random
 #random
 for i in range (0,5):
 	random_int = random.randint(1, 101)
+	print(random_int)
+
+j = random.randint(0,6)
+color_list = ["red", "orange", "yellow", "green", "blue"]
+print(color_list[j])
+
 
 
