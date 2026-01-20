@@ -8,9 +8,9 @@ try:
 	product = a*b
 	quotient = a/b
 except ZeroDivisionError:
-	print("cannot divide by zero")
+	quotient= "cannot divide by zero"
 except ValueError:
-	print("not a number")
+	quotient = "not a number"
 finally:
 	print(sum)
 	print(difference)
