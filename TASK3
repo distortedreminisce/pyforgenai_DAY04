@@ -1,1 +1,11 @@
+file = input("input file name: ")
 
+try:
+	file.open(file, "r")
+except FileNotFoundError: 
+	print("file does not exist")
+except PermissionError:
+	print("no permission to read")
+except IOError as e:
+	print(e)
+	
