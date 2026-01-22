@@ -25,18 +25,26 @@ except requests.exceptions.HTTPError as e:
 except requests.exceptions.RequestException as e:
     print(f"Request failed: {e}")
 
-if choice == 1:
+while True:
+	if choice == 1:
+		print("All users:")
+		print("-"*11)
+		user = next((u for u in users if u["id"] == user_id), None)
+		if user:
+    		print(f"Name: user['name']")
 
-elif choice == 2:
-	print("User details:")
-	print("-"*11)
-	user = next((u for u in users if u["id"] == user_id), None)
-	if user:
-    	print(f"Name: user['name']")
-		print(f"Username: user['username']")
-		print(f"Email: user['email']")
-	else:
-    	print("User not found")
+	elif choice == 2:
+		print("User details:")
+		print("-"*11)
+		user = next((u for u in users if u["id"] == user_id), None)
+		if user:
+    		print(f"Name: user['name']")
+			print(f"Username: user['username']")
+			print(f"Email: user['email']")
+		else:
+    		print("User not found")
+
+	menu()
 	
 	
 
