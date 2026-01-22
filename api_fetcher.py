@@ -9,5 +9,10 @@ def menu():
 	print("4. Exit")
 	choice = int(input("Input your choice: "))
 
+response = requests("
 print("Welcome to reminisce's ali fetcher!")
+menu()
+
+if choice == 1:
+	
 
