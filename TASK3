@@ -23,6 +23,8 @@ else:
 	for characters in file:
 		char_count += 1
 	print("number of characters:", char_count)
+finally:
+	file.close()
 
 	
 	
