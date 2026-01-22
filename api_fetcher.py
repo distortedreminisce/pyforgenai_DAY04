@@ -10,8 +10,9 @@ def menu():
 	choice = int(input("Input your choice: "))
 
 def fetch_users():
-	for index, u in enumerate(users, start =1): 
-		print(f"{index}. Name: {u['name']}, Id: {u['Id']}")
+	for user in users: 
+		if "id" in user and "name" in user:
+			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
 
 
 print("Welcome to reminisce's api fetcher!")
