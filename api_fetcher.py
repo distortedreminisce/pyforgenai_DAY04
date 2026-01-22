@@ -14,7 +14,6 @@ def fetch_users():
 		if "id" in user and "name" in user:
 			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
 
-
 print("Welcome to reminisce's api fetcher!")
 try:
     response = requests.get("https://jsonplaceholder.typicode.com/users", timeout=5)
