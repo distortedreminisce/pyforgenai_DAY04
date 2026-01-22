@@ -11,7 +11,6 @@ def menu():
 
 
 print("Welcome to reminisce's api fetcher!")
-menu()
 try:
     response = requests.get("https://jsonplaceholder.typicode.com/users", timeout=5)
     response.raise_for_status()
@@ -26,12 +25,15 @@ except requests.exceptions.RequestException as e:
     print(f"Request failed: {e}")
 
 while True:
+	menu()
 	if choice == 1:
 		print("All users:")
 		print("-"*11)
 		user = next((u for u in users if u["id"] == user_id), None)
 		if user:
     		print(f"Name: user['name']")
+		else:
+			print("User not found")
 
 	elif choice == 2:
 		print("User details:")
