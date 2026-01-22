@@ -44,7 +44,9 @@ while True:
 		else:
     		print("User not found")
 
-	menu()
+	else:
+		print("Thanks for using reminisce's api fetcher")
+		break
 	
 	
 
