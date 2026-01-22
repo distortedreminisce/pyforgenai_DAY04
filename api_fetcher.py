@@ -18,7 +18,7 @@ print("Welcome to reminisce's api fetcher!")
 try:
     response = requests.get("https://jsonplaceholder.typicode.com/users", timeout=5)
     response.raise_for_status()
-    data = response.json()
+    users = response.json()
 except requests.exceptions.Timeout:
     print("Request timed out. Please try again.")
 except requests.exceptions.ConnectionError:
