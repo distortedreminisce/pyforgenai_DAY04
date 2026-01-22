@@ -32,7 +32,7 @@ while True:
 	menu()
 	if choice == 1:
 		print("All users:")
-		
+		fetch_users()
 
 	elif choice == 2:
 		print("User details:")
