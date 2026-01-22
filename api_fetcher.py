@@ -28,6 +28,8 @@ except requests.exceptions.RequestException as e:
 if choice == 1:
 
 elif choice == 2:
+	print("User details:")
+	print("-"*11)
 	user = next((u for u in users if u["id"] == user_id), None)
 	if user:
     	print(f"Name: user['name']")
