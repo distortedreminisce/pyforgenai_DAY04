@@ -10,9 +10,17 @@ def menu():
 	choice = int(input("Input your choice: "))
 
 def fetch_users():
+	print("All users:")
 	for user in users: 
 		if "id" in user and "name" in user:
 			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
+
+def fetch_user_details(user):
+	id_choice = int(input("Enter user Id: "))
+	print("User details:")
+	
+	
+	
 
 print("Welcome to reminisce's api fetcher!")
 try:
@@ -31,11 +39,10 @@ except requests.exceptions.RequestException as e:
 while True:
 	menu()
 	if choice == 1:
-		print("All users:")
 		fetch_users()
 
 	elif choice == 2:
-		print("User details:")
+		
 		
 
 	elif choice == 3:
