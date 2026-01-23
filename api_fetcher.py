@@ -32,6 +32,19 @@ def fetch_user_details(id_choice):
 def fetch_user_posts(id_choice):
 	print("User posts")
 	print("-"*11)
+	try:
+    	post_response = requests.get("https://jsonplaceholder.typicode.com/posts?userId={id}", timeout=5)
+    	post_response.raise_for_status()
+    	user_posts = post_response.json()
+	except requests.exceptions.Timeout:
+    	print("Request timed out. Please try again.")
+	except requests.exceptions.ConnectionError:
+    	print("Connection error. Check your internet.")
+	except requests.exceptions.HTTPError as e:
+    	print(f"HTTP error: {e}")
+	except requests.exceptions.RequestException as e:
+    	print(f"Request failed: {e}")
+	
 	
 	
 	
