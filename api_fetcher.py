@@ -15,12 +15,17 @@ def fetch_users():
 		if "id" in user and "name" in user:
 			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
 
-def fetch_user_details(user):
-	id_choice = int(input("Enter user Id: "))
+def fetch_user_details(id_choice):
 	print("User details:")
-	if id_choice in user:
-		
-	
+	for user in users:
+		if id_choice in user:
+			print(f"Name: {user['name']}")
+			print(f"Id: {user['Id']}")
+			print(f"Email: {user['email']}")
+			print("Address:")
+			print(f"['address']['street']")
+			print(f"['address']['suite']")
+			print(f"['address']['city']")
 	
 #start
 print("Welcome to reminisce's api fetcher!")
@@ -43,7 +48,8 @@ while True:
 		fetch_users()
 
 	elif choice == 2:
-		
+		id_choice = int(input("Enter user Id: "))
+		fetch_user_details(id_choice)
 		
 
 	elif choice == 3:
