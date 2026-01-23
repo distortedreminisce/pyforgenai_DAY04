@@ -11,12 +11,14 @@ def menu():
 
 def fetch_users():
 	print("All users:")
+	print("-"*11)
 	for user in users: 
 		if "id" in user and "name" in user:
 			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
 
 def fetch_user_details(id_choice):
 	print("User details:")
+	print("-"*11)
 	for user in users:
 		if id_choice in user:
 			print(f"Name: {user['name']}")
@@ -28,6 +30,9 @@ def fetch_user_details(id_choice):
 			print(f"	City: user{['address']['city']}")
 
 def fetch_user_posts(id_choice):
+	print("User posts")
+	print("-"*11)
+	
 	
 	
 #start
@@ -57,7 +62,8 @@ while True:
 
 	elif choice == 3:
 		id_choice = int(input("Enter user Id: "))
-
+		fetch_user_posts(id_choice)
+		
 	else:
 		print("Thanks for using reminisce's api fetcher")
 		break
