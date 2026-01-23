@@ -26,8 +26,8 @@ def fetch_user_details(id_choice):
 			print(f"Email: {user['email']}")
 			print("Address:")
 			print(f"  Street: {user['address']['street']}")
-			print(f"  Suite: {user['address']['suite']}")
 			print(f"  City: {user['address']['city']}")
+			print(f"  Zipcode: {user['address']['zipcode']}")
 
 def fetch_user_posts(id_choice):
 	print("User posts")
