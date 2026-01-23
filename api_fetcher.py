@@ -18,10 +18,11 @@ def fetch_users():
 def fetch_user_details(user):
 	id_choice = int(input("Enter user Id: "))
 	print("User details:")
+	if id_choice in user:
+		
 	
 	
-	
-
+#start
 print("Welcome to reminisce's api fetcher!")
 try:
     response = requests.get("https://jsonplaceholder.typicode.com/users", timeout=5)
