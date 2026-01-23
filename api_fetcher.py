@@ -9,14 +9,14 @@ def menu():
 	print("4. Exit")
 	choice = int(input("Input your choice: "))
 
-def fetch_users():
+def display_users():
 	print("All users:")
 	print("-"*11)
 	for index, user in enumerate(users,1): 
 		if "id" in user and "name" in user:
 			print(f"{index}. Name: {user['name']}, Id: {user['id']}")
 
-def fetch_user_details(id_choice):
+def display_user_details(id_choice):
 	print("User details:")
 	print("-"*11)
 	for user in users:
@@ -29,9 +29,7 @@ def fetch_user_details(id_choice):
 			print(f"  City: {user['address']['city']}")
 			print(f"  Zipcode: {user['address']['zipcode']}")
 
-def fetch_user_posts(id_choice):
-	print("User posts")
-	print("-"*11)
+def fetch_user_posts():
 	try:
     	post_response = requests.get("https://jsonplaceholder.typicode.com/posts?userId={id}", timeout=5)
     	post_response.raise_for_status()
@@ -44,6 +42,11 @@ def fetch_user_posts(id_choice):
     	print(f"HTTP error: {e}")
 	except requests.exceptions.RequestException as e:
     	print(f"Request failed: {e}")
+	
+def display_user_posts():
+	print("User posts")
+	print("-"*11)
+	
 	
 	
 	
@@ -66,16 +69,16 @@ except requests.exceptions.RequestException as e:
 while True:
 	menu()
 	if choice == 1:
-		fetch_users()
+		display_users()
 
 	elif choice == 2:
 		id_choice = int(input("Enter user Id: "))
-		fetch_user_details(id_choice)
+		display_user_details(id_choice)
 		
 
 	elif choice == 3:
 		id_choice = int(input("Enter user Id: "))
-		fetch_user_posts(id_choice)
+		display_user_posts(id_choice)
 		
 	else:
 		print("Thanks for using reminisce's api fetcher")
