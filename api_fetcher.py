@@ -12,9 +12,9 @@ def menu():
 def fetch_users():
 	print("All users:")
 	print("-"*11)
-	for user in users: 
+	for index, user in enumerate(users,1): 
 		if "id" in user and "name" in user:
-			print(f"{index}. Name: {user['name']}, Id: {user['Id']}")
+			print(f"{index}. Name: {user['name']}, Id: {user['id']}")
 
 def fetch_user_details(id_choice):
 	print("User details:")
