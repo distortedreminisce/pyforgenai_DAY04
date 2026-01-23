@@ -46,7 +46,10 @@ def fetch_user_posts():
 def display_user_posts():
 	print("User posts")
 	print("-"*11)
-	
+	for user in users:
+		if id_choice in user: 
+			print("Posts by {user['name']}:")
+			
 	
 	
 	
@@ -72,12 +75,12 @@ while True:
 		display_users()
 
 	elif choice == 2:
-		id_choice = int(input("Enter user Id: "))
+		id_choice = int(input("Enter user id: "))
 		display_user_details(id_choice)
 		
 
 	elif choice == 3:
-		id_choice = int(input("Enter user Id: "))
+		id_choice = int(input("Enter user id: "))
 		display_user_posts(id_choice)
 		
 	else:
