@@ -22,7 +22,7 @@ def display_user_details(id_choice):
 	for user in users:
 		if id_choice in user:
 			print(f"Name: {user['name']}")
-			print(f"Id: {user['Id']}")
+			print(f"Id: {user['id']}")
 			print(f"Email: {user['email']}")
 			print("Address:")
 			print(f"  Street: {user['address']['street']}")
